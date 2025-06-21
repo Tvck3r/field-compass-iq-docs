@@ -1,0 +1,100 @@
+site_name: Field-Compass-IQ Documentation
+site_description: Comprehensive documentation for Field-Compass-IQ platform
+site_url: https://docs.fieldcompass.com
+repo_url: https://github.com/Tvck3r/field-compass-iq-docs
+repo_name: field-compass-iq-docs
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+
+nav:
+  - Home: index.md
+  - Architecture:
+    - Overview: architecture/overview.md
+    - Microservices: architecture/microservices.md
+    - Database: architecture/database.md
+    - Security: architecture/security.md
+    - Deployment: architecture/deployment.md
+  - API Reference:
+    - Overview: api/README.md
+    - Authentication: api/authentication.md
+    - Customers: api/customers.md
+    - Work Orders: api/work-orders.md
+    - Routing: api/routing.md
+    - Webhooks: api/webhooks.md
+  - Development:
+    - Getting Started: development/getting-started.md
+    - Coding Standards: development/coding-standards.md
+    - Testing: development/testing.md
+    - Deployment: development/deployment.md
+  - User Guides:
+    - Web Application: user-guides/web-app.md
+    - Mobile Application: user-guides/mobile-app.md
+    - Admin Panel: user-guides/admin-panel.md
+    - Integrations: user-guides/integrations.md
+  - Operations:
+    - Monitoring: operations/monitoring.md
+    - Troubleshooting: operations/troubleshooting.md
+    - Backup & Recovery: operations/backup-recovery.md
+    - Scaling: operations/scaling.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - mermaid2:
+      arguments:
+        theme: base
+        themeVariables:
+          primaryColor: '#3b82f6'
+          primaryTextColor: '#ffffff'
+          primaryBorderColor: '#1d4ed8'
+          lineColor: '#6b7280'
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Tvck3r/field-compass-iq
+  version:
+    provider: mike

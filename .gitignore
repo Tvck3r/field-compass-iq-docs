@@ -1,0 +1,47 @@
+# Node modules (if using any doc generation tools)
+node_modules/
+
+# Build outputs
+build/
+dist/
+out/
+
+# Environment files
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Generated documentation
+api-docs/
+generated/
+
+# Local configuration
+config.local.json
